@@ -1,0 +1,23 @@
+<div class="flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
+  <form [formGroup]="form">
+    <div class="grid formgrid p-fluid max-w-30rem">
+      <div class="field col-12">
+        <label>Email</label>
+        <input formControlName="email" class="w-full" placeholder="Digite seu email..." type="text" pInputText>
+      </div>
+      <div class="field col-12">
+        <label>Senha</label>
+        <input formControlName="senha" class="w-full" placeholder="Digite sua senha..." type="text" pInputText>
+      </div>
+      <div class="flex align-items-center justify-content-between mb-5 col-12">
+        <div class="flex align-items-center">
+          <p-checkbox [binary]="true" class="mr-2"></p-checkbox>
+          <label>Lembre de mim</label>
+        </div>
+        <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--secondary-color)"
+          routerLink="../cadastrar-se">Cadastrar-se agora</a>
+      </div>
+      <button pButton pRipple label="Entrar" class="w-full p-3 text-xl p-button-secondary"></button>
+    </div>
+  </form>
+</div>

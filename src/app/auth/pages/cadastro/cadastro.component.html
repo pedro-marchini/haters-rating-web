@@ -1,0 +1,35 @@
+<div class="flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
+  <form [formGroup]="form">
+    <div class="grid formgrid p-fluid max-w-30rem">
+      <div class="field col-12">
+        <label>Nome</label>
+        <input formControlName="nome" placeholder="Digite seu nome..." type="text" pInputText>
+      </div>
+      <div class="field col-6">
+        <label>CPF</label>
+        <input formControlName="cpf" placeholder="Digite seu CPF..." type="text" pInputText>
+      </div>
+      <div class="field col-6">
+        <label>Data de nascimento</label>
+        <p-calendar formControlName="dataNascimento"></p-calendar>
+      </div>
+      <div class="field col-12">
+        <label>Email</label>
+        <input formControlName="email" placeholder="Digite seu email..." type="text" pInputText>
+      </div>
+      <div class="field col-12">
+        <label>Confirme seu email</label>
+        <input formControlName="confirmacaoEmail" placeholder="Confirme seu email..." type="text" pInputText>
+      </div>
+      <div class="field col-12">
+        <label>Senha</label>
+        <p-password formControlName="senha" placeholder="Digite sua senha..." [toggleMask]="true"></p-password>
+      </div>
+    </div>
+    <div class="flex align-items-center justify-content-end mb-5 gap-5">
+      <a class="font-medium no-underline ml-2 text-right cursor-pointer" routerLink="../login"
+        style="color: var(--secondary-color)">Logar-se agora</a>
+    </div>
+    <button pButton pRipple label="Entrar" class="w-full p-3 text-xl p-button-secondary"></button>
+  </form>
+</div>
